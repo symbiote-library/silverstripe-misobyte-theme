@@ -1,0 +1,12 @@
+{
+	"name": "symbiote-library/silverstripe-misobyte-theme",
+	"description": "Helper module for the Symbiote Misobyte theme.",
+	"type": "silverstripe-module",
+	"license": "BSD-3-Clause",
+	"extra": {
+		"installer-name": "misobyte-theme",
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}

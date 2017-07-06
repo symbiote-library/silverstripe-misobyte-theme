@@ -1,0 +1,25 @@
+---
+Name: misobyte_theme_config
+---
+Controller:
+  extensions:
+    - 'MisobyteThemeControllerExtension'
+#TimelineController:
+#  extensions:
+#    - 'MisobyteThemeTimelineExtension'
+
+Site:
+  extensions:
+    - MisobyteThemeSiteExtension
+    
+---
+Name: living_docs_config
+---
+LivingPageExtension:
+  living_designs:
+    'bootstrap3': 'frontend-livingdoc/javascript/livingdocs/bootstrap-design.js'
+    'bootstrap4': 'misobyte-theme/javascript/bootstrap4-design.js'
+  default_page:
+    design:
+      name: 'bootstrap4'
+      version: '0.0.1'
