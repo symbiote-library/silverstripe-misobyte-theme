@@ -42,15 +42,6 @@ class MisobyteThemeControllerExtension extends Extension {
 
 			// block frontend dashboards' js, we have our own
 //			Requirements::block('frontend-dashboards/javascript/dashboards.js');
-			
-			Requirements::javascript(THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js');
-//			
-//			Requirements::javascript("themes/{$theme}/js/jquery.slides.min.js");
-//			Requirements::javascript("themes/{$theme}/js/general.js");
-			Requirements::javascript('ba-sis-community/javascript/info-lists.js');
-            Requirements::javascript('ba-sis-community/javascript/info-lists-bootstrap.js');
-
-            
 //
 //			if ($this->owner instanceof DashboardController) {
 //				Requirements::javascript("themes/{$theme}/js/dashboards.js");
