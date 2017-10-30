@@ -124,6 +124,31 @@
                     }
                 ]
             },
+            "list-styles": {
+                "label": "List styles",
+                "type": "select",
+                "options": [
+                    {
+                        'caption': 'Multiple',
+                        'value': "yes"
+                    },
+                    {
+                        "caption": "None"
+                    },
+                    {
+                        'caption': 'List group',
+                        'value': "list-group"
+                    },
+                    {
+                        'caption': 'List group flush',
+                        'value': "list-group-flush"
+                    },
+                    {
+                        'caption': 'List group item',
+                        'value': "list-group-item"
+                    }
+                ]
+            },
             "text-styles": {
                 "label": "Text styles",
                 "type": "select",
@@ -302,8 +327,11 @@
             {
                 "label": "Lists",
                 "components": [
+                    "unordered-list",
+                    "numbered-list",
                     "list-group",
                     'numbered-list-group',
+                    "list-item",
                     "list-group-item"
                 ]
             },
@@ -612,6 +640,58 @@
                 </figcaption>\n</figure>",
                 "label": "Image"
             },
+            
+            
+            {
+                "name": "unordered-list",
+                "html": "<ul doc-container=\"list\"></ul>",
+                "label": "Unordered List",
+                "properties": [
+                    "text-styles",
+                    "list-styles"
+                ],
+                "directives": {
+                    "list": {
+                        "allowedChildren": [
+                            "list-item"
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "numbered-list",
+                "html": "<ol doc-container=\"list\"></ol>",
+                "label": "Numbered List",
+                "properties": [
+                    "text-styles",
+                    "list-styles"
+                ],
+                "directives": {
+                    "list": {
+                        "allowedChildren": [
+                            "list-item"
+                        ]
+                    }
+                }
+            },
+            
+            
+
+            {
+                "name": "list-item",
+                "html": "<li doc-editable=\"text\">List item</li>",
+                "label": "List item",
+                "properties": [
+                    "text-styles",
+                    "list-styles"
+                ],
+                "allowedParents": [
+                    "numbered-list",
+                    "unordered-list"
+                ]
+            },
+            
+            
             {
                 "name": "list-group",
                 "html": "<ul class=\"list-group list-group-flush\" doc-container=\"list\"></ul>",
@@ -643,7 +723,7 @@
             {
                 "name": "list-group-item",
                 "html": "<li class=\"list-group-item\" doc-editable=\"text\">List item</li>",
-                "label": "List item",
+                "label": "List group item",
                 "properties": [
                     "text-styles"
                 ],
