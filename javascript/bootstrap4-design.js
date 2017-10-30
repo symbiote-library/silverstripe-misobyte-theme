@@ -373,9 +373,18 @@
                 "label": "Embed object"
             },
             {
+                "name": "p",
+                "html": "<p doc-editable=\"text\">Paragraph content</p>",
+                "label": "WYSWIG Paragraph",
+                "properties": [
+                    'text-styles',
+                    "padded-styles"
+                ]
+            },
+            {
                 "name": "customhtml",
                 "html": "<div class=\"customhtml\" doc-html=\"html\">Click to modify...\n</div>",
-                "label": "HTML"
+                "label": "Raw HTML"
             },
             {
                 "name": "markdown",
@@ -648,15 +657,7 @@
                 "html": "<div class=\"thumbnail\">\n  <a doc-link=\"link\" href=\"#\" class=\"no-decor\">\n    <img doc-image=\"image\">\n    <div class=\"caption\">\n      <h3 doc-editable=\"label\">Label</h3>\n      <p doc-editable=\"description\">Description</p></div>\n</a>\n</div>",
                 "label": "Teaser"
             },
-            {
-                "name": "p",
-                "html": "<p doc-editable=\"text\">Paragraph content</p>",
-                "label": "Paragraph",
-                "properties": [
-                    'text-styles',
-                    "padded-styles"
-                ]
-            },
+            
             {
                 "name": "quote",
                 "html": "<blockquote>\n  <p>\n    <span class=\"quotation-mark\">&#x201C;</span><span class=\"quote\" doc-editable=\"text\">Quotation</span>\n  </p>\n  <div class=\"caption\" doc-editable=\"author\">Author</div>\n</blockquote>",
